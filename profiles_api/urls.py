@@ -10,6 +10,7 @@ router.register('hello-viewset', views.HelloViewSet, base_name='hello-viewset')
 '''Koriscenjem ModelViewSet ne moramo da definisemo base_name jer smo u queryset objetku vec definisali koji model koristimo
 base_name atribut koristimo samo kada nismo definisali model, ili kada zelimo da override ime modela koji smo definisali'''
 router.register('profile', views.UserProfileViewSet)
+router.register('feed', views.UserProfileFeedViewSet)
 
 urlpatterns = [
     path('hello-view/', views.HelloApiView.as_view()),
